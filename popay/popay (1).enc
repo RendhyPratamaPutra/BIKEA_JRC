@@ -1,0 +1,432 @@
+-- MySQL dump 10.16  Distrib 10.1.25-MariaDB, for Win32 (AMD64)
+--
+-- Host: localhost    Database: popay
+-- ------------------------------------------------------
+-- Server version	10.1.25-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `denda`
+--
+
+DROP TABLE IF EXISTS `denda`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `denda` (
+  `kd_denda` int(4) NOT NULL AUTO_INCREMENT,
+  `ket_denda` varchar(20) DEFAULT NULL,
+  `beban_denda` double DEFAULT NULL,
+  `kd_jenispembayaran` int(10) NOT NULL,
+  PRIMARY KEY (`kd_denda`),
+  KEY `kd_pembayaran` (`kd_jenispembayaran`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `denda`
+--
+
+LOCK TABLES `denda` WRITE;
+/*!40000 ALTER TABLE `denda` DISABLE KEYS */;
+/*!40000 ALTER TABLE `denda` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `grup`
+--
+
+DROP TABLE IF EXISTS `grup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `grup` (
+  `kd_grup` int(5) NOT NULL AUTO_INCREMENT,
+  `grup` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`kd_grup`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `grup`
+--
+
+LOCK TABLES `grup` WRITE;
+/*!40000 ALTER TABLE `grup` DISABLE KEYS */;
+INSERT INTO `grup` VALUES (1,'Admin'),(2,'Pegawai'),(3,'Super Admin');
+/*!40000 ALTER TABLE `grup` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jenis_pembayaran`
+--
+
+DROP TABLE IF EXISTS `jenis_pembayaran`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jenis_pembayaran` (
+  `kd_jenispembayaran` int(10) NOT NULL AUTO_INCREMENT,
+  `keperluan` varchar(20) DEFAULT NULL,
+  `beban` double DEFAULT NULL,
+  PRIMARY KEY (`kd_jenispembayaran`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jenis_pembayaran`
+--
+
+LOCK TABLES `jenis_pembayaran` WRITE;
+/*!40000 ALTER TABLE `jenis_pembayaran` DISABLE KEYS */;
+INSERT INTO `jenis_pembayaran` VALUES (1,'Uang Gedung',1000000),(2,'Daftar Ulang',100000),(3,'SPP',50000),(4,'Buku',0),(5,'Study Tour',0),(6,'Rekreasi',0);
+/*!40000 ALTER TABLE `jenis_pembayaran` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jurusan`
+--
+
+DROP TABLE IF EXISTS `jurusan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jurusan` (
+  `kd_jurusan` int(5) NOT NULL AUTO_INCREMENT,
+  `jurusan` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`kd_jurusan`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jurusan`
+--
+
+LOCK TABLES `jurusan` WRITE;
+/*!40000 ALTER TABLE `jurusan` DISABLE KEYS */;
+INSERT INTO `jurusan` VALUES (1,'IPA'),(2,'IPS');
+/*!40000 ALTER TABLE `jurusan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `kelas`
+--
+
+DROP TABLE IF EXISTS `kelas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `kelas` (
+  `kd_kelas` int(5) NOT NULL AUTO_INCREMENT,
+  `nama_kelas` varchar(10) NOT NULL,
+  `kd_jurusan` int(5) NOT NULL,
+  `kd_jumlah` int(5) NOT NULL,
+  `ket` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`kd_kelas`),
+  KEY `kd_jurusan` (`kd_jurusan`),
+  CONSTRAINT `kelas_ibfk_1` FOREIGN KEY (`kd_jurusan`) REFERENCES `jurusan` (`kd_jurusan`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `kelas`
+--
+
+LOCK TABLES `kelas` WRITE;
+/*!40000 ALTER TABLE `kelas` DISABLE KEYS */;
+INSERT INTO `kelas` VALUES (1,'X',1,1,'X IPA 1'),(2,'X',1,2,'X IPA 2');
+/*!40000 ALTER TABLE `kelas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pegawai`
+--
+
+DROP TABLE IF EXISTS `pegawai`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pegawai` (
+  `nip` int(15) NOT NULL AUTO_INCREMENT,
+  `nama_admin` varchar(30) DEFAULT NULL,
+  `password` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `tempat_lahir` varchar(20) DEFAULT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `jenis_kelamin` varchar(10) DEFAULT NULL,
+  `alamat` varchar(40) DEFAULT NULL,
+  `kd_grup` int(5) NOT NULL,
+  `statuspassword` varchar(5) DEFAULT 'None',
+  PRIMARY KEY (`nip`),
+  KEY `kd_grup` (`kd_grup`),
+  CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`kd_grup`) REFERENCES `grup` (`kd_grup`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1235 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pegawai`
+--
+
+LOCK TABLES `pegawai` WRITE;
+/*!40000 ALTER TABLE `pegawai` DISABLE KEYS */;
+INSERT INTO `pegawai` VALUES (1111,'Alda','$2y$10$PVlwup5p19hdmpwqbQ8/N.p410I9MZy5HegYIbTgVEzjdWoMumbpW','aldagheauly@gmail.com','Probolinggo','2018-12-02','Perempuan','Jl.Kasih Bangga',1,'Aktif'),(1234,'Admin','$2y$10$CK/8Ol5lhLDbyaSfNWEGoOtJ4l5yLO9c/36ziOBp7gEvHfr5.ZpKW','tedyjuniarl@gmail.com','Bondowoso','2018-12-12','Laki-Laki','Jl.Kasih Bangga',3,'Aktif');
+/*!40000 ALTER TABLE `pegawai` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pembayaran`
+--
+
+DROP TABLE IF EXISTS `pembayaran`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pembayaran` (
+  `kd_pembayaran` int(10) NOT NULL AUTO_INCREMENT,
+  `kd_jenispembayaran` int(10) NOT NULL,
+  `nis` int(4) NOT NULL,
+  `nominal` varchar(10) DEFAULT NULL,
+  `tanggal_pembayaran` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`kd_pembayaran`),
+  KEY `kd_jenispembayaran` (`kd_jenispembayaran`),
+  KEY `NIS` (`nis`),
+  CONSTRAINT `pembayaran_ibfk_3` FOREIGN KEY (`kd_jenispembayaran`) REFERENCES `jenis_pembayaran` (`kd_jenispembayaran`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `pembayaran_ibfk_5` FOREIGN KEY (`nis`) REFERENCES `siswa` (`nis`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pembayaran`
+--
+
+LOCK TABLES `pembayaran` WRITE;
+/*!40000 ALTER TABLE `pembayaran` DISABLE KEYS */;
+INSERT INTO `pembayaran` VALUES (1,3,111,'50000','2018-12-27 02:24:44'),(2,3,111,'9950000','2018-12-27 02:26:38'),(3,1,111,'1','2018-12-27 02:26:51'),(4,1,111,'9950000','2018-12-27 02:31:26');
+/*!40000 ALTER TABLE `pembayaran` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_unicode_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `totalharga` BEFORE INSERT ON `pembayaran` FOR EACH ROW begin
+declare deposit varchar(10) ;
+select deposit into deposit from simpanan where nis=new.nis;
+if deposit >= 0 then signal sqlstate '45000' 
+set Message_Text = 'Deposit Kosong';
+end if;
+end */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 trigger pengurangandeposit
+after insert on pembayaran
+for each row begin
+update simpanan set deposit = (deposit-new.nominal) where nis=new.nis;
+end */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `pengumuman`
+--
+
+DROP TABLE IF EXISTS `pengumuman`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pengumuman` (
+  `kd_pengumuman` int(5) NOT NULL AUTO_INCREMENT,
+  `judul` varchar(20) DEFAULT NULL,
+  `pengumuman` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`kd_pengumuman`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pengumuman`
+--
+
+LOCK TABLES `pengumuman` WRITE;
+/*!40000 ALTER TABLE `pengumuman` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pengumuman` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `perjalanan`
+--
+
+DROP TABLE IF EXISTS `perjalanan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `perjalanan` (
+  `kd_perjalanan` int(4) NOT NULL AUTO_INCREMENT,
+  `destinasi` varchar(30) DEFAULT NULL,
+  `kd_jenispembayaran` int(10) NOT NULL,
+  PRIMARY KEY (`kd_perjalanan`),
+  KEY `kd_pembayaran` (`kd_jenispembayaran`),
+  CONSTRAINT `perjalanan_ibfk_1` FOREIGN KEY (`kd_jenispembayaran`) REFERENCES `jenis_pembayaran` (`kd_jenispembayaran`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `perjalanan`
+--
+
+LOCK TABLES `perjalanan` WRITE;
+/*!40000 ALTER TABLE `perjalanan` DISABLE KEYS */;
+INSERT INTO `perjalanan` VALUES (1,'-',5),(2,'Bandung',6);
+/*!40000 ALTER TABLE `perjalanan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pesan`
+--
+
+DROP TABLE IF EXISTS `pesan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pesan` (
+  `kd_pesan` int(5) NOT NULL AUTO_INCREMENT,
+  `nis` int(4) NOT NULL,
+  `pesan` varchar(225) DEFAULT NULL,
+  PRIMARY KEY (`kd_pesan`),
+  KEY `NIS` (`nis`),
+  CONSTRAINT `pesan_ibfk_2` FOREIGN KEY (`nis`) REFERENCES `siswa` (`nis`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pesan`
+--
+
+LOCK TABLES `pesan` WRITE;
+/*!40000 ALTER TABLE `pesan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pesan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `simpanan`
+--
+
+DROP TABLE IF EXISTS `simpanan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `simpanan` (
+  `kd_simpanan` int(5) NOT NULL AUTO_INCREMENT,
+  `deposit` double DEFAULT NULL,
+  `tanggal` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `nip` int(15) NOT NULL,
+  `nis` int(4) NOT NULL,
+  PRIMARY KEY (`kd_simpanan`),
+  KEY `NIP` (`nip`),
+  KEY `NIS` (`nis`),
+  CONSTRAINT `simpanan_ibfk_3` FOREIGN KEY (`nip`) REFERENCES `pegawai` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `simpanan_ibfk_4` FOREIGN KEY (`nis`) REFERENCES `siswa` (`nis`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `simpanan`
+--
+
+LOCK TABLES `simpanan` WRITE;
+/*!40000 ALTER TABLE `simpanan` DISABLE KEYS */;
+INSERT INTO `simpanan` VALUES (1,0,'2018-12-27 08:03:24',1234,111);
+/*!40000 ALTER TABLE `simpanan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `siswa`
+--
+
+DROP TABLE IF EXISTS `siswa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `siswa` (
+  `nis` int(4) NOT NULL AUTO_INCREMENT,
+  `nama_siswa` varchar(30) DEFAULT NULL,
+  `password` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `tempat_lahir` varchar(20) DEFAULT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `jenis_kelamin` varchar(10) DEFAULT NULL,
+  `alamat` varchar(40) DEFAULT NULL,
+  `nama_ayah` varchar(30) DEFAULT NULL,
+  `nama_ibu` varchar(30) DEFAULT NULL,
+  `nohp` varchar(13) DEFAULT NULL,
+  `statuspassword` varchar(5) DEFAULT 'None',
+  `kd_kelas` int(5) NOT NULL,
+  `kd_status` int(5) NOT NULL,
+  PRIMARY KEY (`nis`),
+  KEY `kd_kelas` (`kd_kelas`),
+  KEY `kd_status` (`kd_status`),
+  CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`kd_status`) REFERENCES `status` (`kd_status`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`kd_kelas`) REFERENCES `kelas` (`kd_kelas`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `siswa`
+--
+
+LOCK TABLES `siswa` WRITE;
+/*!40000 ALTER TABLE `siswa` DISABLE KEYS */;
+INSERT INTO `siswa` VALUES (111,'Teddi Juniarl','$2y$10$eY4n1HVHuk3.ehmAuJMtc.XdBEOLlvVqnUzd8RToCg2di/Bgl86Ve','tedyjuniarl@gmail.com','Bondowoso','2018-09-05','Laki-Laki','Jl.Kasih Bangga','Achmad Ikrom','Ika Eryansi','08204993385','Aktif',1,1),(112,'Adelia Putri','$2y$10$eY4n1HVHuk3.ehmAuJMtc.XdBEOLlvVqnUzd8RToCg2di/Bgl86Ve','adeliaputri@gmail.com','Bondowoso','2018-12-10','Perempuan','Jl.Bangsal','Mustajib','Bila','08204993890','Aktif',1,1),(113,'Alda Ghealy','$2y$10$GsIL6/xeYJg3DQyslBB/SOdMM7dpfIIJwMxQwiI3mPaCt869vBwe.','','Situbondo','2018-12-12','Perempuan','jl.hati\"','1234','12','08276127641','None',2,1);
+/*!40000 ALTER TABLE `siswa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `status`
+--
+
+DROP TABLE IF EXISTS `status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `status` (
+  `kd_status` int(5) NOT NULL AUTO_INCREMENT,
+  `status` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`kd_status`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `status`
+--
+
+LOCK TABLES `status` WRITE;
+/*!40000 ALTER TABLE `status` DISABLE KEYS */;
+INSERT INTO `status` VALUES (1,'Siswa'),(2,'Non-Siswa');
+/*!40000 ALTER TABLE `status` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-12-27 19:12:47
