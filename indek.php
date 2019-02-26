@@ -33,6 +33,8 @@
 		<label for="submit" class="labelfrm">&nbsp< :</label>
 			<input type="submit" name="input" value="Simpan" id="input"/>
 			<input type="reset" name="clear" value="clear" id="clear"/>
+		<label> for </label
+		
 	</form>
 <br><br>
 	<a href="data.php">Lihat Data</a>
