@@ -33,7 +33,7 @@
 		<label for="submit" class="labelfrm">&nbsp< :</label>
 			<input type="submit" name="input" value="Simpan" id="input"/>
 			<input type="reset" name="clear" value="clear" id="clear"/>
-		<label> for </label
+		<label> forplay </label
 		
 	</form>
 <br><br>
