@@ -41,3 +41,5 @@
 </table>
 </body>
 </html>
+
+//test stream_wrapper_register
