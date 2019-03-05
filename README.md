@@ -8,4 +8,4 @@ Kelompok: 2
     4. Sharah Risky Nadiastuty  (E41171946)
     5. Yosef Yoga Himawan       (E41171926)
     
-Deskripsi Projek: Pengembangan sistem informasi tentang penyewaan mobil dan kendaraan lainnya.     
+Deskripsi Projek: Pengembangan sistem informasi tentang penyewaan mobil dan kendaraan mulai dari mobil hingga bigbus.     
