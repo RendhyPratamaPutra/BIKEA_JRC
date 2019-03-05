@@ -42,4 +42,5 @@
 </body>
 </html>
 
+test
 //test stream_wrapper_register
