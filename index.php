@@ -10,7 +10,8 @@
 ?>
 Something is wrong with the XAMPP installation :-(
 	kkukukukukukukukukukukuku
-zzzzzzzzzzz] mbmbmb
+zzzzzzzzzzz] mbmbmbkkkkkk
 HJGHGHGHH
+jjj
 
 L;L;L;L;;L;L;Lkoding
