@@ -50,7 +50,7 @@ class m_pesanan extends CI_Model
 
 		#Get data user by id
 		$this->db->where($this->primary,$id);
-		$this->db->join($this->table_mobil." t_mobil","t_mobil.PLAT_NO_MOBIL=".$this->table_detail.".PLAT_NO_MOBIL");
+		$this->db->join($this->table_mobil." t_mobil","t_mobil.ID_MOBIL=".$this->table_detail.".ID_MOBIL");
 		$data=$this->db->get($this->table_detail);
 
 		return $data->result();
