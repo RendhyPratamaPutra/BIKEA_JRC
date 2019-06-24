@@ -41,7 +41,7 @@
           <li>
             <a href="javascript::;">
               <h4 class="control-sidebar-subheading">
-                Custom Template Design
+                Custom Template
                 <span class="pull-right-container">
                   <span class="label label-danger pull-right">70%</span>
                 </span>
