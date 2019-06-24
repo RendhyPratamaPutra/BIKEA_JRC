@@ -63,7 +63,7 @@
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
         <form method="post">
-          <h3 class="control-sidebar-heading">Pengaturan umums</h3>
+          <h3 class="control-sidebar-heading">Pengaturan umum</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
