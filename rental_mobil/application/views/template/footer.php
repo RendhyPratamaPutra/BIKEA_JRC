@@ -3,7 +3,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+     Terima Kasih Telah Menggunakan Layanan Kami
     </div>
     <!-- Default to the left -->
     <strong>JemberRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
