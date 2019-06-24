@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Jember | Rental Mobil</title>
+  <title>Jember | Rent Car</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -55,14 +55,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Sistem</b> Rental Mobil</span>
+      <span class="logo-lg"><b>Jember</b> Rent Car</span>
     </a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">beralih navigasi</span>
       </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
@@ -89,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <p>
                   <?php echo $this->session->userdata("NAME");?> - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <small>Selamat Datang Admin</small>
                 </p>
               </li>
               <!-- Menu Body -->
