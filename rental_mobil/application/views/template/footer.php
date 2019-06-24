@@ -3,7 +3,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-     Terima Kasih Telah Menggunakan Layanan Kami
+      Anything you want
     </div>
     <!-- Default to the left -->
     <strong>JemberRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
@@ -41,7 +41,7 @@
           <li>
             <a href="javascript::;">
               <h4 class="control-sidebar-subheading">
-                Custom Template
+                Custom Template Design
                 <span class="pull-right-container">
                   <span class="label label-danger pull-right">70%</span>
                 </span>

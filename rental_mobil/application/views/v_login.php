@@ -28,7 +28,8 @@
                             <h1 class="h3 font-w600 push-30-t push-5" style="color:white">Jember Rent Car</h1>
                             </center>
                             <br><br>
-                            <p style="color:white" class="text-center">Selamat datang dan silahkan masukan nama serta sandi anda.</p>
+                            <p style="color:white" class="text-center">Selamat datang <br>
+                             silahkan masukan nama serta sandi anda.</p>
                             <br><br>
                             <form class="js-validation-login form-horizontal push-30-t push-50" action="<?php echo site_url("login/login_proses");?>" method="post">
                                 <div class="form-group">
@@ -52,13 +53,13 @@
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <label class="css-input switch switch-sm switch-primary" style="color:white">
-                                            <input type="checkbox" id="login-remember-me" name="login-remember-me" style="color:white"><span></span> Remember Me?
+                                            <input type="checkbox" id="login-remember-me" name="login-remember-me" style="color:white"><span></span> Ingat saya ?
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <center><button class="btn btn-block btn-primary" type="submit"><i class="si si-login pull-right" style="color:white"></i> Log in</button></center>
+                                        <center><button class="btn btn-block btn-primary" type="submit"><i class="si si-login pull-right" style="color:white"></i> Masuk </button></center>
                                     </div>
                                 </div>
                             </form>
