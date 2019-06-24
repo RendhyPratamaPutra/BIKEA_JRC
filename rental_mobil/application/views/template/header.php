@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <li class="user-footer">
                 
                 <div class="pull-right">
-                  <a href="<?php echo site_url("Login/logout");?>" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo site_url("Login/logout");?>" class="btn btn-default btn-flat">Keluar</a>
                 </div>
               </li>
             </ul>
