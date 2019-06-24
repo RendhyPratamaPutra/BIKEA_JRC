@@ -24,11 +24,12 @@
                         <div class="block-content block-content-full block-content-narrow">
 
                             <center>
+                            <br><br>
                             <h1 class="h3 font-w600 push-30-t push-5" style="color:white">Jember Rent Car</h4>
                             </center>
-                            <br><br><br><br>
+                            <br><br>
                             <p style="color:white" class="text-center">Selamat Datang <br> di Layanan Jasa Rental Mobil Kami. <br> Silahkan Masukan Username dan Sandi Anda</p>
-
+                            <br>
 
                             <form class="js-validation-login form-horizontal push-30-t push-50" action="<?php echo site_url("login/login_proses");?>" method="post">
                                 <div class="form-group">
