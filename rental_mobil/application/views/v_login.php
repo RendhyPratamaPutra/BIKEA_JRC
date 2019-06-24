@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/bootstrap.min.css") ?>">
 
     </head>
-    <body background="<?php echo base_url();?>assets/img/background.jpg" style="overflow:hidden">
+    <body background="<?php echo base_url();?>assets/img/background1.png" style="overflow:hidden">
         <div class="content overflow-hidden">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
@@ -24,11 +24,12 @@
                         <div class="block-content block-content-full block-content-narrow">
 
                             <center>
-                            <h1 class="h3 font-w600 push-30-t push-5" style="color:white">Jember Rental Mobil</h4>
+                            <br><br>
+                            <h1 class="h3 font-w600 push-30-t push-5" style="color:white">Jember Rent Car</h1>
                             </center>
-                            <br><br><br><br>
-                            <p style="color:white" class="text-center">Welcome, please login.</p>
-
+                            <br><br>
+                            <p style="color:white" class="text-center">Selamat datang dan silahkan masukan nama serta sandi anda.</p>
+                            <br><br>
                             <form class="js-validation-login form-horizontal push-30-t push-50" action="<?php echo site_url("login/login_proses");?>" method="post">
                                 <div class="form-group">
                                     <div class="col-xs-12">
