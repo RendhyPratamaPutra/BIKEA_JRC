@@ -19,7 +19,7 @@ class M_mobil_admin extends CI_Model
 
     // datatables
     function json() {
-        $this->datatables->select('ID_MOBIL,NAMA_MOBIL,MERK_MOBIL,DESKRIPSI_MOBIL,TAHUN_MOBIL,KAPASITAS_MOBIL,HARGA_MOBIL,WARNA_MOBIL,BENSIN_MOBIL,PLAT_NO_MOBIL,STATUS_SEWA,STATUS_MOBIL,CREATED_MOBIL');
+        $this->datatables->select('ID_MOBIL,NAMA_MOBIL,MERK_MOBIL,DESKRIPSI_MOBIL,TAHUN_MOBIL,KAPASITAS_MOBIL,HARGA_MOBIL,WARNA_MOBIL,TRANSMISI_MOBIL,PLAT_NO_MOBIL,STATUS_SEWA,STATUS_MOBIL,CREATED_MOBIL');
         $this->datatables->from('tb_mobil');
         //add this line for join
         //$this->datatables->join('table2', 'tb_mobil.field = table2.field');
@@ -53,6 +53,7 @@ class M_mobil_admin extends CI_Model
     // get total rows
     function total_rows($q = NULL) {
         $this->db->like('ID_MOBIL', $q);
+    $this->db->or_like('PLAT_NO_MOBIL', $q);
 	$this->db->or_like('NAMA_MOBIL', $q);
 	$this->db->or_like('MERK_MOBIL', $q);
 	$this->db->or_like('DESKRIPSI_MOBIL', $q);
@@ -60,8 +61,7 @@ class M_mobil_admin extends CI_Model
 	$this->db->or_like('KAPASITAS_MOBIL', $q);
 	$this->db->or_like('HARGA_MOBIL', $q);
 	$this->db->or_like('WARNA_MOBIL', $q);
-	$this->db->or_like('BENSIN_MOBIL', $q);
-	$this->db->or_like('PLAT_NO_MOBIL', $q);
+	$this->db->or_like('TRANSMISI_MOBIL', $q);
 	$this->db->or_like('STATUS_SEWA', $q);
 	$this->db->or_like('STATUS_MOBIL', $q);
 	$this->db->or_like('CREATED_MOBIL', $q);
@@ -73,6 +73,7 @@ class M_mobil_admin extends CI_Model
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('ID_MOBIL', $q);
+        $this->db->or_like('PLAT_NO_MOBIL', $q);
     	$this->db->or_like('NAMA_MOBIL', $q);
     	$this->db->or_like('MERK_MOBIL', $q);
     	$this->db->or_like('DESKRIPSI_MOBIL', $q);
@@ -80,8 +81,7 @@ class M_mobil_admin extends CI_Model
     	$this->db->or_like('KAPASITAS_MOBIL', $q);
     	$this->db->or_like('HARGA_MOBIL', $q);
     	$this->db->or_like('WARNA_MOBIL', $q);
-    	$this->db->or_like('BENSIN_MOBIL', $q);
-    	$this->db->or_like('PLAT_NO_MOBIL', $q);
+    	$this->db->or_like('TRANSMISI_MOBIL', $q);
     	$this->db->or_like('STATUS_SEWA', $q);
     	$this->db->or_like('STATUS_MOBIL', $q);
     	$this->db->or_like('CREATED_MOBIL', $q);

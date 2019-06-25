@@ -26,15 +26,15 @@
                         <div class="box-body">
                             <h2 style="margin-top:0px">Detail <?php echo $NAMA_MOBIL; ?></h2>
 							<table class="table">
-							    <tr><td>NAMA MOBIL</td><td><?php echo $NAMA_MOBIL; ?></td></tr>
+                                <tr><td>PLAT NO MOBIL</td><td><?php echo $PLAT_NO_MOBIL; ?></td></tr>
+                                <tr><td>NAMA MOBIL</td><td><?php echo $NAMA_MOBIL; ?></td></tr>
 							    <tr><td>MERK MOBIL</td><td><?php echo $MERK_MOBIL; ?></td></tr>
 							    <tr><td>DESKRIPSI MOBIL</td><td><?php echo $DESKRIPSI_MOBIL; ?></td></tr>
 							    <tr><td>TAHUN MOBIL</td><td><?php echo $TAHUN_MOBIL; ?></td></tr>
 							    <tr><td>KAPASITAS MOBIL</td><td><?php echo $KAPASITAS_MOBIL; ?> Orang</td></tr>
 							    <tr><td>HARGA MOBIL</td><td>Rp. <?php echo number_format($HARGA_MOBIL) ?></td></tr>
 							    <tr><td>WARNA MOBIL</td><td><?php echo $WARNA_MOBIL; ?></td></tr>
-							    <tr><td>BENSIN MOBIL</td><td><?php echo $BENSIN_MOBIL; ?></td></tr>
-							    <tr><td>PLAT NO MOBIL</td><td><?php echo $PLAT_NO_MOBIL; ?></td></tr>
+							    <tr><td>TRANSMISI MOBIL</td><td><?php echo $TRANSMISI_MOBIL; ?></td></tr>
                                 <tr><td>FASILITAS</td><td><?php foreach ($FASILITAS as $row) {
                                     echo $row->FASILITAS."&nbsp,&nbsp;";
                                 } ?></td></tr>
