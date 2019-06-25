@@ -58,8 +58,8 @@
                                 <input type="text" class="form-control" name="WARNA_MOBIL" id="WARNA_MOBIL" placeholder="WARNA MOBIL" value="<?php echo $WARNA_MOBIL; ?>" />
                             </div>
                             <div class="form-group">
-                                <label for="int">TRANSMISI MOBIL <?php echo form_error('BENSIN_MOBIL') ?></label>
-                                <select class="form-control" name="BENSIN_MOBIL" id="BENSIN_MOBIL">
+                                <label for="int">TRANSMISI MOBIL <?php echo form_error('TRANSMISI_MOBIL') ?></label>
+                                <select class="form-control" name="TRANSMISI_MOBIL" id="TRANSMISI_MOBIL">
                                     <option value="1" <?php if ($TRANSMISI_MOBIL==1) echo "selected" ?> >Otomatis</option>
                                     <option value="2" <?php if ($TRANSMISI_MOBIL==2) echo "selected" ?> >Manual</option> 
                                 </select>
@@ -80,7 +80,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="int">GAMBAR MOBIL</label>
+                                <label for="int">IMAGE MOBIL</label>
                                 <input class="form-control" type="file" name="PHOTO" id="PHOTO">
                             </div>
                             
@@ -93,7 +93,7 @@
 
                             <input type="hidden" name="ID_MOBIL" value="<?php echo $ID_MOBIL; ?>" /> 
                             <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-                            <a href="<?php echo site_url('mobil') ?>" class="btn btn-default">keluar</a>
+                            <a href="<?php echo site_url('mobil') ?>" class="btn btn-default">Cancel</a>
                         </form>
                         </div>                        
                     </div>

@@ -27,7 +27,7 @@
                             <form action="<?php echo $action; ?>" method="post">
                                 <input type="hidden" name="ID_MOBIL" value="<?php echo $ID_MOBIL; ?>" /> 
                                 <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-                                <a href="<?php echo site_url('fasilitas_mobil') ?>" class="btn btn-default">Keluar</a>
+                                <a href="<?php echo site_url('fasilitas_mobil') ?>" class="btn btn-default">Cancel</a>
                             </form>
                         </div>                        
                     </div>
