@@ -54,10 +54,10 @@
                                 <input type="text" class="form-control" name="WARNA_MOBIL" id="WARNA_MOBIL" placeholder="WARNA MOBIL" value="<?php echo $WARNA_MOBIL; ?>" />
                             </div>
                             <div class="form-group">
-                                <label for="int">BENSIN MOBIL <?php echo form_error('BENSIN_MOBIL') ?></label>
-                                <select class="form-control" name="BENSIN_MOBIL" id="BENSIN_MOBIL">
-                                    <option value="1" <?php if ($BENSIN_MOBIL==1) echo "selected" ?> >Otomatis</option>
-                                    <option value="2" <?php if ($BENSIN_MOBIL==2) echo "selected" ?> >Manual</option> 
+                                <label for="int">TRANSMISI MOBIL <?php echo form_error('TRANSMISI_MOBIL') ?></label>
+                                <select class="form-control" name="TRANSMISI_MOBIL" id="TRANSMISI_MOBIL">
+                                    <option value="1" <?php if ($TRANSMISI_MOBIL==1) echo "selected" ?> >Otomatis</option>
+                                    <option value="2" <?php if ($TRANSMISI_MOBIL==2) echo "selected" ?> >Manual</option> 
                                 </select>
                             </div>
                             <div class="form-group">
