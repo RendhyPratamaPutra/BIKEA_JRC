@@ -60,7 +60,7 @@
                             <div class="form-group">
                                 <label for="int">TRANSMISI MOBIL <?php echo form_error('TRANSMISI_MOBIL') ?></label>
                                 <select class="form-control" name="TRANSMISI_MOBIL" id="TRANSMISI_MOBIL">
-                                    <option value="1" <?php if ($TRANSMISI_MOBIL==1) echo "selected" ?> >Otomatis</option>
+                                    <option value="1" <?php if ($TRANSMISI_MOBIL==1) echo "selected" ?> >Matic</option>
                                     <option value="2" <?php if ($TRANSMISI_MOBIL==2) echo "selected" ?> >Manual</option> 
                                 </select>
                             </div>
