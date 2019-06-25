@@ -3,10 +3,10 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Thank you very much.
+      Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>JRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>JemberRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -20,28 +20,28 @@
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Aktivitas Terbaru</h3>
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Hari Ulang Tahun</h4>
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
 
-                <p>pada 23 April 2019</p>
+                <p>Will be 23 on April 24th</p>
               </div>
             </a>
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">perkembangan Tugas</h3>
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <h4 class="control-sidebar-subheading">
-                progress sejauh ini.
+                Custom Template Design
                 <span class="pull-right-container">
                   <span class="label label-danger pull-right">70%</span>
                 </span>
@@ -58,21 +58,21 @@
       </div>
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Konten Tab Statistik</div>
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
       <!-- /.tab-pane -->
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
         <form method="post">
-          <h3 class="control-sidebar-heading">Pengaturan umum</h3>
+          <h3 class="control-sidebar-heading">General Settings</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-            Laporkan penggunaan panel
+              Report panel usage
               <input type="checkbox" class="pull-right" checked>
             </label>
 
             <p>
-            Beberapa informasi tentang opsi pengaturan umum ini
+              Some information about this general settings option
             </p>
           </div>
           <!-- /.form-group -->

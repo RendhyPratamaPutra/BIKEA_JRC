@@ -33,17 +33,17 @@
 							    <tr><td>KAPASITAS MOBIL</td><td><?php echo $KAPASITAS_MOBIL; ?> Orang</td></tr>
 							    <tr><td>HARGA MOBIL</td><td>Rp. <?php echo number_format($HARGA_MOBIL) ?></td></tr>
 							    <tr><td>WARNA MOBIL</td><td><?php echo $WARNA_MOBIL; ?></td></tr>
-							    <tr><td>TRANSMISI MOBIL</td><td><?php echo $TRANSMISI_MOBIL; ?></td></tr>
+							    <tr><td>BENSIN MOBIL</td><td><?php echo $BENSIN_MOBIL; ?></td></tr>
 							    <tr><td>PLAT NO MOBIL</td><td><?php echo $PLAT_NO_MOBIL; ?></td></tr>
                                 <tr><td>FASILITAS</td><td><?php foreach ($FASILITAS as $row) {
                                     echo $row->FASILITAS."&nbsp,&nbsp;";
                                 } ?></td></tr>
                                 <tr><td>STATUS SEWA</td><td><?php if ($STATUS_SEWA==1) echo "Disewa"; else echo "Tidak Disewa"; ?></td></tr>
 							    <tr><td>STATUS MOBIL</td><td><?php if ($STATUS_MOBIL==1) echo "Tersedia"; else echo "Tidak Tersedia"; ?></td></tr>
-							    <tr><td>TAMBAH MOBIL</td><td><?php echo $CREATED_MOBIL; ?></td></tr>
-                                <tr><td>GAMBAR</td><td><img src="<?php echo base_url('upload/mobil/'.$IMAGE); ?>" width="450px"></td></tr>
+							    <tr><td>CREATED MOBIL</td><td><?php echo $CREATED_MOBIL; ?></td></tr>
+                                <tr><td>IMAGE</td><td><img src="<?php echo base_url('upload/mobil/'.$IMAGE); ?>" width="450px"></td></tr>
 
-							    <tr><td></td><td><a href="<?php echo site_url('mobil') ?>" class="btn btn-default">Keluar</a></td></tr>
+							    <tr><td></td><td><a href="<?php echo site_url('mobil') ?>" class="btn btn-default">Cancel</a></td></tr>
 							</table>
                         </div>                        
                     </div>
