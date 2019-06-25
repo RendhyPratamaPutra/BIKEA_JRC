@@ -35,6 +35,7 @@ class Mobil extends CI_Controller
         
         if ($row) {
             $data = array(
+                'PLAT_NO_MOBIL' => $row->PLAT_NO_MOBIL,
         		'ID_MOBIL' => $row->ID_MOBIL,
         		'NAMA_MOBIL' => $row->NAMA_MOBIL,
         		'MERK_MOBIL' => $row->MERK_MOBIL,
@@ -43,8 +44,7 @@ class Mobil extends CI_Controller
         		'KAPASITAS_MOBIL' => $row->KAPASITAS_MOBIL,
         		'HARGA_MOBIL' => $row->HARGA_MOBIL,
         		'WARNA_MOBIL' => $row->WARNA_MOBIL,
-        		'BENSIN_MOBIL' => $this->bensin($row->BENSIN_MOBIL),
-        		'PLAT_NO_MOBIL' => $row->PLAT_NO_MOBIL,
+        		'TRANSMISI_MOBIL' => $this->bensin($row->TRANSMISI_MOBIL),
         		'STATUS_SEWA' => $row->STATUS_SEWA,
         		'STATUS_MOBIL' => $row->STATUS_MOBIL,
         		'CREATED_MOBIL' => $row->CREATED_MOBIL,
@@ -65,7 +65,8 @@ class Mobil extends CI_Controller
         $data = array(
             'button' => 'Create',
             'action' => site_url('mobil/create_action'),
-    	    'ID_MOBIL' => set_value('ID_MOBIL'),
+            'ID_MOBIL' => set_value('ID_MOBIL'),
+            'PLAT_NO_MOBIL' => set_value('PLAT_NO_MOBIL'),
     	    'NAMA_MOBIL' => set_value('NAMA_MOBIL'),
     	    'MERK_MOBIL' => set_value('MERK_MOBIL'),
     	    'DESKRIPSI_MOBIL' => set_value('DESKRIPSI_MOBIL'),
@@ -73,8 +74,7 @@ class Mobil extends CI_Controller
     	    'KAPASITAS_MOBIL' => set_value('KAPASITAS_MOBIL'),
     	    'HARGA_MOBIL' => set_value('HARGA_MOBIL'),
     	    'WARNA_MOBIL' => set_value('WARNA_MOBIL'),
-    	    'BENSIN_MOBIL' => set_value('BENSIN_MOBIL'),
-    	    'PLAT_NO_MOBIL' => set_value('PLAT_NO_MOBIL'),
+    	    'TRANSMISI_MOBIL' => set_value('TRANSMISI_MOBIL'),
 	        'STATUS_SEWA' => set_value('STATUS_SEWA'),
 	        'STATUS_MOBIL' => set_value('STATUS_MOBIL'),
 	        'CREATED_MOBIL' => set_value('CREATED_MOBIL'),
@@ -100,6 +100,7 @@ class Mobil extends CI_Controller
         } else {
 
             $data["data"] = array(
+                'PLAT_NO_MOBIL' => $this->input->post('PLAT_NO_MOBIL',TRUE),
         		'NAMA_MOBIL' => $this->input->post('NAMA_MOBIL',TRUE),
         		'MERK_MOBIL' => $this->input->post('MERK_MOBIL',TRUE),
         		'DESKRIPSI_MOBIL' => $this->input->post('DESKRIPSI_MOBIL',TRUE),
@@ -107,8 +108,7 @@ class Mobil extends CI_Controller
         		'KAPASITAS_MOBIL' => $this->input->post('KAPASITAS_MOBIL',TRUE),
         		'HARGA_MOBIL' => $this->input->post('HARGA_MOBIL',TRUE),
         		'WARNA_MOBIL' => $this->input->post('WARNA_MOBIL',TRUE),
-        		'BENSIN_MOBIL' => $this->input->post('BENSIN_MOBIL',TRUE),
-        		'PLAT_NO_MOBIL' => $this->input->post('PLAT_NO_MOBIL',TRUE),
+        		'TRANSMISI_MOBIL' => $this->input->post('TRANSMISI_MOBIL',TRUE),
         		'STATUS_SEWA' => $this->input->post('STATUS_SEWA',TRUE),
         		'STATUS_MOBIL' => $this->input->post('STATUS_MOBIL',TRUE),
         		'CREATED_MOBIL' => date('Y-m-d H:i:s'),
@@ -144,7 +144,8 @@ class Mobil extends CI_Controller
             $data = array(
                 'button' => 'Update',
                 'action' => site_url('mobil/update_action'),
-        		'ID_MOBIL' => set_value('ID_MOBIL', $row->ID_MOBIL),
+                'ID_MOBIL' => set_value('ID_MOBIL', $row->ID_MOBIL),
+                'PLAT_NO_MOBIL' => set_value('PLAT_NO_MOBIL', $row->PLAT_NO_MOBIL),
         		'NAMA_MOBIL' => set_value('NAMA_MOBIL', $row->NAMA_MOBIL),
         		'MERK_MOBIL' => set_value('MERK_MOBIL', $row->MERK_MOBIL),
         		'DESKRIPSI_MOBIL' => set_value('DESKRIPSI_MOBIL', $row->DESKRIPSI_MOBIL),
@@ -152,8 +153,7 @@ class Mobil extends CI_Controller
         		'KAPASITAS_MOBIL' => set_value('KAPASITAS_MOBIL', $row->KAPASITAS_MOBIL),
         		'HARGA_MOBIL' => set_value('HARGA_MOBIL', $row->HARGA_MOBIL),
         		'WARNA_MOBIL' => set_value('WARNA_MOBIL', $row->WARNA_MOBIL),
-        		'BENSIN_MOBIL' => set_value('BENSIN_MOBIL', $row->BENSIN_MOBIL),
-        		'PLAT_NO_MOBIL' => set_value('PLAT_NO_MOBIL', $row->PLAT_NO_MOBIL),
+        		'TRANSMISI_MOBIL' => set_value('TRANSMISI_MOBIL', $row->BENSIN_MOBIL),
         		'STATUS_SEWA' => set_value('STATUS_SEWA', $row->STATUS_SEWA),
         		'STATUS_MOBIL' => set_value('STATUS_MOBIL', $row->STATUS_MOBIL),
         		'CREATED_MOBIL' => set_value('CREATED_MOBIL', $row->CREATED_MOBIL),
@@ -187,6 +187,7 @@ class Mobil extends CI_Controller
             $this->update($this->input->post('ID_MOBIL', TRUE));
         } else {
             $data['data'] = array(
+                'PLAT_NO_MOBIL' => $this->input->post('PLAT_NO_MOBIL',TRUE),
         		'NAMA_MOBIL' => $this->input->post('NAMA_MOBIL',TRUE),
         		'MERK_MOBIL' => $this->input->post('MERK_MOBIL',TRUE),
         		'DESKRIPSI_MOBIL' => $this->input->post('DESKRIPSI_MOBIL',TRUE),
@@ -194,8 +195,7 @@ class Mobil extends CI_Controller
         		'KAPASITAS_MOBIL' => $this->input->post('KAPASITAS_MOBIL',TRUE),
         		'HARGA_MOBIL' => $this->input->post('HARGA_MOBIL',TRUE),
         		'WARNA_MOBIL' => $this->input->post('WARNA_MOBIL',TRUE),
-        		'BENSIN_MOBIL' => $this->input->post('BENSIN_MOBIL',TRUE),
-        		'PLAT_NO_MOBIL' => $this->input->post('PLAT_NO_MOBIL',TRUE),
+        		'TRANSMISI_MOBIL' => $this->input->post('TRANSMISI_MOBIL',TRUE),
         		'STATUS_SEWA' => $this->input->post('STATUS_SEWA',TRUE),
         		'STATUS_MOBIL' => $this->input->post('STATUS_MOBIL',TRUE),
     	    );
@@ -241,6 +241,7 @@ class Mobil extends CI_Controller
 
     public function _rules() 
     {
+    $this->form_validation->set_rules('PLAT_NO_MOBIL', 'plat no mobil', 'trim|required');
 	$this->form_validation->set_rules('NAMA_MOBIL', 'nama mobil', 'trim|required');
 	$this->form_validation->set_rules('MERK_MOBIL', 'merk mobil', 'trim|required');
 	$this->form_validation->set_rules('DESKRIPSI_MOBIL', 'deskripsi mobil', 'trim|required');
@@ -248,8 +249,7 @@ class Mobil extends CI_Controller
 	$this->form_validation->set_rules('KAPASITAS_MOBIL', 'kapasitas mobil', 'trim|required');
 	$this->form_validation->set_rules('HARGA_MOBIL', 'harga mobil', 'trim|required|numeric');
 	$this->form_validation->set_rules('WARNA_MOBIL', 'warna mobil', 'trim|required');
-	$this->form_validation->set_rules('BENSIN_MOBIL', 'bensin mobil', 'trim|required');
-	$this->form_validation->set_rules('PLAT_NO_MOBIL', 'plat no mobil', 'trim|required');
+	$this->form_validation->set_rules('TRANSMISI_MOBIL', 'transmisi mobil', 'trim|required');
 	$this->form_validation->set_rules('STATUS_SEWA', 'status sewa', 'trim|required');
 	$this->form_validation->set_rules('STATUS_MOBIL', 'status mobil', 'trim|required');
 	// $this->form_validation->set_rules('CREATED_MOBIL', 'created mobil', 'trim|required');

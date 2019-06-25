@@ -26,6 +26,10 @@
                         <div class="box-body">
                             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
                             <div class="form-group">
+                                <label for="varchar">PLAT NO MOBIL <?php echo form_error('PLAT_NO_MOBIL') ?></label>
+                                <input type="text" class="form-control" name="PLAT_NO_MOBIL" id="PLAT_NO_MOBIL" placeholder="PLAT NO MOBIL" value="<?php echo $PLAT_NO_MOBIL; ?>" />
+                            </div>
+                            <div class="form-group">
                                 <label for="varchar">NAMA MOBIL <?php echo form_error('NAMA_MOBIL') ?></label>
                                 <input type="text" class="form-control" name="NAMA_MOBIL" id="NAMA_MOBIL" placeholder="NAMA MOBIL" value="<?php echo $NAMA_MOBIL; ?>" />
                             </div>
@@ -38,7 +42,7 @@
                                 <textarea class="form-control" rows="3" name="DESKRIPSI_MOBIL" id="DESKRIPSI_MOBIL" placeholder="DESKRIPSI MOBIL"><?php echo $DESKRIPSI_MOBIL; ?></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="varchar">TAHUN MOBIL <?php echo form_error('TAHUN_MOBIL') ?></label>
+                            \<label for="varchar">TAHUN MOBIL <?php echo form_error('TAHUN_MOBIL') ?></label>
                                 <input type="number" class="form-control" name="TAHUN_MOBIL" id="TAHUN_MOBIL" placeholder="TAHUN MOBIL" value="<?php echo $TAHUN_MOBIL; ?>" />
                             </div>
                             <div class="form-group">
@@ -54,15 +58,11 @@
                                 <input type="text" class="form-control" name="WARNA_MOBIL" id="WARNA_MOBIL" placeholder="WARNA MOBIL" value="<?php echo $WARNA_MOBIL; ?>" />
                             </div>
                             <div class="form-group">
-                                <label for="int">BENSIN MOBIL <?php echo form_error('BENSIN_MOBIL') ?></label>
+                                <label for="int">TRANSMISI MOBIL <?php echo form_error('BENSIN_MOBIL') ?></label>
                                 <select class="form-control" name="BENSIN_MOBIL" id="BENSIN_MOBIL">
-                                    <option value="1" <?php if ($BENSIN_MOBIL==1) echo "selected" ?> >Otomatis</option>
-                                    <option value="2" <?php if ($BENSIN_MOBIL==2) echo "selected" ?> >Manual</option> 
+                                    <option value="1" <?php if ($TRANSMISI_MOBIL==1) echo "selected" ?> >Otomatis</option>
+                                    <option value="2" <?php if ($TRANSMISI_MOBIL==2) echo "selected" ?> >Manual</option> 
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="varchar">PLAT NO MOBIL <?php echo form_error('PLAT_NO_MOBIL') ?></label>
-                                <input type="text" class="form-control" name="PLAT_NO_MOBIL" id="PLAT_NO_MOBIL" placeholder="PLAT NO MOBIL" value="<?php echo $PLAT_NO_MOBIL; ?>" />
                             </div>
                             <div class="form-group">
                                 <label for="int">STATUS SEWA <?php echo form_error('STATUS_SEWA') ?></label>

@@ -91,7 +91,7 @@ class Mobil extends REST_Controller
 							'KAPASITAS_MOBIL' => $this->post('KAPASITAS_MOBIL') ,
 							'HARGA_MOBIL' => $this->post('HARGA_MOBIL') ,
 							'WARNA_MOBIL' => $this->post('WARNA_MOBIL') ,
-							'BENSIN_MOBIL' => 1,
+							'TRANSMISI_MOBIL' => 1,
 
 							'PLAT_NO_MOBIL' =>$this->post('PLAT_NO_MOBIL'),
 							'STATUS_SEWA'=>0,
@@ -194,7 +194,7 @@ class Mobil extends REST_Controller
 							'KAPASITAS_MOBIL' => $this->put('KAPASITAS_MOBIL') ,
 							'HARGA_MOBIL' => $this->put('HARGA_MOBIL') ,
 							'WARNA_MOBIL' => $this->put('WARNA_MOBIL') ,
-							'BENSIN_MOBIL' => $this->put('BENSIN_MOBIL') ,
+							'TRANSMISI_MOBIL' => $this->put('TRANSMISI_MOBIL') ,
 							'PLAT_NO_MOBIL' =>$this->put('PLAT_NO_MOBIL'),
 							'STATUS_MOBIL'=>$this->put('STATUS_MOBIL'),
 							'CREATED_MOBIL'=>date('Y-m-d h:i:s'),

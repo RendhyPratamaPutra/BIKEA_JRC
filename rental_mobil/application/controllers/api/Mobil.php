@@ -85,15 +85,15 @@ class Mobil extends REST_Controller
 	function index_post(){
 		
 		#
-		$mobil_data = array('NAMA_MOBIL' =>$this->post('NAMA_MOBIL') , 
+		$mobil_data = array('PLAT_NO_MOBIL' =>$this->post('PLAT_NO_MOBIL'),
+							'NAMA_MOBIL' =>$this->post('NAMA_MOBIL') , 
 							'MERK_MOBIL' => $this->post('MERK_MOBIL') ,
 							'DESKRIPSI_MOBIL' => $this->post('DESKRIPSI_MOBIL') , 
 							'TAHUN_MOBIL' => $this->post('TAHUN_MOBIL') ,
 							'KAPASITAS_MOBIL' => $this->post('KAPASITAS_MOBIL') ,
 							'HARGA_MOBIL' => $this->post('HARGA_MOBIL') ,
 							'WARNA_MOBIL' => $this->post('WARNA_MOBIL') ,
-							'BENSIN_MOBIL' => 1 ,
-							'PLAT_NO_MOBIL' =>$this->post('PLAT_NO_MOBIL'),
+							'TRANSMISI_MOBIL' => 1 ,
 							'STATUS_SEWA'=>0,
 							'STATUS_MOBIL'=>$this->post('STATUS_MOBIL'),
 							'CREATED_MOBIL'=>date('Y-m-d h:i:s'),
@@ -186,15 +186,15 @@ class Mobil extends REST_Controller
 
 		$id=$this->put('ID_MOBIL');
 
-		$mobil_data = array('NAMA_MOBIL' =>$this->put('NAMA_MOBIL') , 
+		$mobil_data = array('PLAT_NO_MOBIL' =>$this->put('PLAT_NO_MOBIL'),
+							'NAMA_MOBIL' =>$this->put('NAMA_MOBIL') , 
 							'MERK_MOBIL' => $this->put('MERK_MOBIL') ,
 							'DESKRIPSI_MOBIL' => $this->put('DESKRIPSI_MOBIL') , 
 							'TAHUN_MOBIL' => $this->put('TAHUN_MOBIL') ,
 							'KAPASITAS_MOBIL' => $this->put('KAPASITAS_MOBIL') ,
 							'HARGA_MOBIL' => $this->put('HARGA_MOBIL') ,
 							'WARNA_MOBIL' => $this->put('WARNA_MOBIL') ,
-							'BENSIN_MOBIL' => $this->put('BENSIN_MOBIL') ,
-							'PLAT_NO_MOBIL' =>$this->put('PLAT_NO_MOBIL'),
+							'TRANSMISI_MOBIL' => $this->put('TRANSMISI_MOBIL') ,
 							'STATUS_MOBIL'=>$this->put('STATUS_MOBIL'),
 							'CREATED_MOBIL'=>date('Y-m-d h:i:s'),
 						);

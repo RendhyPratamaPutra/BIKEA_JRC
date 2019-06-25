@@ -41,6 +41,7 @@
                                 <thead>
                                     <tr>
                                         <th width="80px">No</th>
+                                <th>PLAT NO MOBIL</th>
                                 <th>NAMA MOBIL</th>
                                 <th>MERK MOBIL</th>
                                 <!-- <th>DESKRIPSI MOBIL</th> -->
@@ -49,7 +50,6 @@
                                 <th>HARGA MOBIL</th>
                                 <!-- <th>WARNA MOBIL</th> -->
                                 <!-- <th>BENSIN MOBIL</th> -->
-                                <th>PLAT NO MOBIL</th>
                                 <!-- <th>IMAGE</th> -->
                                 <th>STATUS SEWA</th>
                                 <th>STATUS MOBIL</th>
@@ -62,6 +62,7 @@
                                     <?php foreach ($data as $key => $val): ?>
                                         <tr>
                                             <td><?php echo $key+1 ?></td>
+                                            <td><?php echo $val->PLAT_NO_MOBIL ?></td>
                                             <td><?php echo $val->NAMA_MOBIL; ?></td>
                                             <td><?php echo $val->MERK_MOBIL ?></td>
                                             <!-- <td><?php echo $val->DESKRIPSI_MOBIL ?></td> -->
@@ -69,8 +70,7 @@
                                             <!-- <td><?php echo $val->KAPASITAS_MOBIL ?></td> -->
                                             <td>Rp. <?php echo number_format($val->HARGA_MOBIL)?></td>
                                             <!-- <td><?php echo $val->WARNA_MOBIL ?></td> -->
-                                            <!-- <td><?php echo $val->BENSIN_MOBIL ?></td> -->
-                                            <td><?php echo $val->PLAT_NO_MOBIL ?></td>
+                                            <!-- <td><?php echo $val->TRANSMISI_MOBIL ?></td> -->
                                             <!-- <td><img src="<?php echo base_url('upload/m/'.$val->PHOTO) ?>"></td> -->
                                             <td><?php if ($val->STATUS_SEWA==1) echo "Disewa"; else echo "Tidak Disewa"; ?></td>
                                             <td><?php if ($val->STATUS_MOBIL==1) echo "Tersedia"; else echo "Tidak Tersedia";  ?></td>
