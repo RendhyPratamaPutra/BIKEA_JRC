@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Jember | Rent Car</title>
+  <title>Jember | Rental Mobil</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -44,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?php echo base_url('assets/datatables/dataTables.bootstrap.css') ?>"/>
   <link rel="stylesheet" href="<?php echo base_url('assets/datatables/dataTables.bootstrap.css') ?>"/>
 </head>
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -55,14 +55,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Jember</b> Rent Car</span>
+      <span class="logo-lg"><b>Sistem</b> Rental Mobil</span>
     </a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">beralih navigasi</span>
+        <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
@@ -89,7 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <p>
                   <?php echo $this->session->userdata("NAME");?> - Web Developer
-                  <small>Selamat Datang Admin</small>
+                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <li class="user-footer">
                 
                 <div class="pull-right">
-                  <a href="<?php echo site_url("Login/logout");?>" class="btn btn-default btn-flat">Keluar</a>
+                  <a href="<?php echo site_url("Login/logout");?>" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>

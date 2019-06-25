@@ -56,7 +56,7 @@
                             <div class="form-group">
                                 <label for="int">BENSIN MOBIL <?php echo form_error('BENSIN_MOBIL') ?></label>
                                 <select class="form-control" name="BENSIN_MOBIL" id="BENSIN_MOBIL">
-                                    <option value="1" <?php if ($BENSIN_MOBIL==1) echo "selected" ?> >Otomatis</option>
+                                    <option value="1" <?php if ($BENSIN_MOBIL==1) echo "selected" ?> >Autometic</option>
                                     <option value="2" <?php if ($BENSIN_MOBIL==2) echo "selected" ?> >Manual</option> 
                                 </select>
                             </div>
@@ -80,7 +80,7 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="int">GAMBAR MOBIL</label>
+                                <label for="int">IMAGE MOBIL</label>
                                 <input class="form-control" type="file" name="PHOTO" id="PHOTO">
                             </div>
                             
@@ -93,7 +93,7 @@
 
                             <input type="hidden" name="ID_MOBIL" value="<?php echo $ID_MOBIL; ?>" /> 
                             <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-                            <a href="<?php echo site_url('mobil') ?>" class="btn btn-default">keluar</a>
+                            <a href="<?php echo site_url('mobil') ?>" class="btn btn-default">Cancel</a>
                         </form>
                         </div>                        
                     </div>
