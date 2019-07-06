@@ -42,7 +42,7 @@
                                 <textarea class="form-control" rows="3" name="DESKRIPSI_MOBIL" id="DESKRIPSI_MOBIL" placeholder="DESKRIPSI MOBIL"><?php echo $DESKRIPSI_MOBIL; ?></textarea>
                             </div>
                             <div class="form-group">
-                            \<label for="varchar">TAHUN MOBIL <?php echo form_error('TAHUN_MOBIL') ?></label>
+                            <label for="varchar">TAHUN MOBIL <?php echo form_error('TAHUN_MOBIL') ?></label>
                                 <input type="number" class="form-control" name="TAHUN_MOBIL" id="TAHUN_MOBIL" placeholder="TAHUN MOBIL" value="<?php echo $TAHUN_MOBIL; ?>" />
                             </div>
                             <div class="form-group">
@@ -93,7 +93,7 @@
 
                             <input type="hidden" name="ID_MOBIL" value="<?php echo $ID_MOBIL; ?>" /> 
                             <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
-                            <a href="<?php echo site_url('mobil') ?>" class="btn btn-default">Cancel</a>
+                            <a href="<?php echo site_url('mobil') ?>" class="btn btn-default">Keluar</a>
                         </form>
                         </div>                        
                     </div>

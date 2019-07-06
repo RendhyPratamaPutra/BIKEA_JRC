@@ -62,7 +62,7 @@ class Users extends CI_Controller
     public function create() 
     {
         $data = array(
-            'button' => 'Create',
+            'button' => 'Tambah',
             'action' => site_url('users/create_action'),
     	    'ID_USER' => set_value('ID_USER'),
     	    'USERNAME' => set_value('USERNAME'),

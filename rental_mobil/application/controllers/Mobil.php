@@ -44,7 +44,7 @@ class Mobil extends CI_Controller
         		'KAPASITAS_MOBIL' => $row->KAPASITAS_MOBIL,
         		'HARGA_MOBIL' => $row->HARGA_MOBIL,
         		'WARNA_MOBIL' => $row->WARNA_MOBIL,
-        		'TRANSMISI_MOBIL' => $this->bensin($row->TRANSMISI_MOBIL),
+        		'TRANSMISI_MOBIL' => $this->bensin($row->BENSIN_MOBIL),
         		'STATUS_SEWA' => $row->STATUS_SEWA,
         		'STATUS_MOBIL' => $row->STATUS_MOBIL,
         		'CREATED_MOBIL' => $row->CREATED_MOBIL,
@@ -63,7 +63,7 @@ class Mobil extends CI_Controller
     public function create() 
     {
         $data = array(
-            'button' => 'Create',
+            'button' => 'Tambah',
             'action' => site_url('mobil/create_action'),
             'ID_MOBIL' => set_value('ID_MOBIL'),
             'PLAT_NO_MOBIL' => set_value('PLAT_NO_MOBIL'),
@@ -142,7 +142,7 @@ class Mobil extends CI_Controller
 
         if ($row) {
             $data = array(
-                'button' => 'Update',
+                'button' => 'Ubah',
                 'action' => site_url('mobil/update_action'),
                 'ID_MOBIL' => set_value('ID_MOBIL', $row->ID_MOBIL),
                 'PLAT_NO_MOBIL' => set_value('PLAT_NO_MOBIL', $row->PLAT_NO_MOBIL),

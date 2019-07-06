@@ -54,7 +54,7 @@
                                 <th>STATUS SEWA</th>
                                 <th>STATUS MOBIL</th>
                                 <th>CREATED MOBIL</th>
-                                <th class="text-center">Action</th>
+                                <th class="text-center">AKSI</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -75,7 +75,7 @@
                                             <td><?php if ($val->STATUS_SEWA==1) echo "Disewa"; else echo "Tidak Disewa"; ?></td>
                                             <td><?php if ($val->STATUS_MOBIL==1) echo "Tersedia"; else echo "Tidak Tersedia";  ?></td>
                                             <td><?php echo $val->CREATED_MOBIL ?></td>
-                                            <td class="text-center"><a href="<?php echo base_url('mobil/update').'/'.$val->ID_MOBIL ?>">Edit</a>&nbsp;||&nbsp;<a href="<?php echo base_url('mobil/read').'/'.$val->ID_MOBIL ?>">Detail</a>&nbsp;||&nbsp;<a href="<?php echo base_url('mobil/delete').'/'.$val->ID_MOBIL ?>">Delete</a></td>
+                                            <td class="text-center"><a href="<?php echo base_url('mobil/update').'/'.$val->ID_MOBIL ?>">Ubah</a>&nbsp;||&nbsp;<a href="<?php echo base_url('mobil/read').'/'.$val->ID_MOBIL ?>">Detail</a>&nbsp;||&nbsp;<a href="<?php echo base_url('mobil/delete').'/'.$val->ID_MOBIL ?>">Hapus</a></td>
                                         </tr>    
                                     <?php endforeach ?>
                                     

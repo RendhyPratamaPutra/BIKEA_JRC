@@ -3,10 +3,10 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+      Thank you very much.
     </div>
     <!-- Default to the left -->
-    <strong>JemberRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>JRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -27,21 +27,21 @@
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">Hari Ulang Tahun</h4>
 
-                <p>Will be 23 on April 24th</p>
+                <p>Pada 23 April 24</p>
               </div>
             </a>
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <h3 class="control-sidebar-heading">Perkembangan Tugas</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <h4 class="control-sidebar-subheading">
-                Custom Template Design
+                Proses Pekerjaan.
                 <span class="pull-right-container">
                   <span class="label label-danger pull-right">70%</span>
                 </span>
@@ -58,21 +58,21 @@
       </div>
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <div class="tab-pane" id="control-sidebar-stats-tab">Konten tab Statistik</div>
       <!-- /.tab-pane -->
       <!-- Settings tab content -->
       <div class="tab-pane" id="control-sidebar-settings-tab">
         <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+          <h3 class="control-sidebar-heading">pengaturan Umum</h3>
 
           <div class="form-group">
             <label class="control-sidebar-subheading">
-              Report panel usage
+            Laporkan penggunaan panel
               <input type="checkbox" class="pull-right" checked>
             </label>
 
             <p>
-              Some information about this general settings option
+            Beberapa informasi tentang opsi pengaturan umum ini
             </p>
           </div>
           <!-- /.form-group -->
