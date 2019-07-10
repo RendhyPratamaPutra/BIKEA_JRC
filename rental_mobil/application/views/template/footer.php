@@ -3,7 +3,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Thank you very much.
+      Terimakasih Banyak.
     </div>
     <!-- Default to the left -->
     <strong>JRC &copy; 2019 <a href="#">Company</a>.</strong> All rights reserved.
